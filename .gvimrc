@@ -28,11 +28,6 @@ set keymodel=startsel,stopsel   " use shift for text selection
 " see :help i_ctrl-r_ctrl-o for explanation 
 
 
-":colors blue
-:set lines=45
-:set co=122
-
-
 set tag=tags,../tags
 set modeline                    " type `:h modeline'
 set autoindent                  " type :help autoindent
@@ -55,6 +50,11 @@ set ruler                       " Show the line and column number
 set noswapfile                  " do not create swap files
 
 
+
+:syntax on
+":colors blue
+:set lines=45
+:set co=122
 
 
   highlight Normal guibg=Darkblue guifg=White
