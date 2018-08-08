@@ -1,6 +1,7 @@
 :map <F11> :source ~/.gvimrc<CR>
-"set encoding=koi8-r
+"set fileencodings=ucs-bom,utf8,koi8-r
 "set encoding=utf8
+"nnoremap <C-]> <Esc>:exe "ts " . expand("<cword>")<Esc>
 
 "search the keyword after or under the cursor through ID database
 no _] :sp<CR>:! lid -R grep <cword> %:p:h > <C-R>=&errorfile<CR><CR>:cf<CR>
@@ -40,6 +41,7 @@ set ignorecase                  " in search patterns
 set hls
 "set nohls
 " for automatic formatting (see also `:h formatoptions')
+set formatoptions+=ro           " Automatically insert the current comment leader
 autocmd BufRead *.c,*.h,*.cc,*.cpp set cinoptions=>4,p4,t0,+4,{0,}0,:2,=2,e0,^0,(0,)20,*30
 "set nowrap
 set ruler                       " Show the line and column number
