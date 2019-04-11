@@ -10,8 +10,6 @@ no _] :sp<CR>:! lid -R grep <cword> %:p:h > <C-R>=&errorfile<CR><CR>:cf<CR>
 no _[ :sp<CR>:! find \| grep .*[ch]$ \| xargs grep -ns <cword> > <C-R>=&errorfile<CR><CR>:cf<CR>
 
 :behave mswin
-set selectmode=mouse,key
-set keymodel=startsel,stopsel   " use shift for text selection
 
 :map <C-x> "+x
 :map <C-c> "+y
@@ -46,6 +44,7 @@ autocmd BufRead *.c,*.h,*.cc,*.cpp set cinoptions=>4,p4,t0,+4,{0,}0,:2,=2,e0,^0,
 "set nowrap
 set ruler                       " Show the line and column number
 "set equalalways                 " :sp -> spit into equal tabs
+set scrolloff=0                 " revert change from defaults.vim (since vim 8.0)
 
 "set nobackup                    " do not create backup files
 "set nowritebackup
